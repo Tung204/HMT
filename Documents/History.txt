@@ -1,3 +1,3 @@
 19/08/2024: Create repo
-05/09/2024: Create file README.md and .gitignore
+05/09/2024: Create file README.md and .gitignore, create Documents and history.txt
 06/09/2024: add text readme.md
