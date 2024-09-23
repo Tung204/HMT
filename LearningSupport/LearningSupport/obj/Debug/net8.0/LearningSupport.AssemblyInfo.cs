@@ -11,10 +11,12 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-LearningSupport-3e9ebbc8-95ec-442c-b221-5e4789a80acc")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("LearningSupport")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d6bfd4c6ddedc5cea2860506647c74408f3cbbe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a094e249c17e954062f68d362c346730623a07d")]
 [assembly: System.Reflection.AssemblyProductAttribute("LearningSupport")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LearningSupport")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
