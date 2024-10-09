@@ -8234,19 +8234,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nguye\\.nuget\\packages\\": {}
+    "C:\\Users\\MTBH\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Hoc_Tap\\DuAn_HMT\\HMT\\LearningSupport\\LearningSupport\\LearningSupport.csproj",
+      "projectUniqueName": "C:\\Users\\MTBH\\Desktop\\laptrinhweb\\baocaoHMT\\HMT\\LearningSupport\\LearningSupport\\LearningSupport.csproj",
       "projectName": "LearningSupport",
-      "projectPath": "D:\\Hoc_Tap\\DuAn_HMT\\HMT\\LearningSupport\\LearningSupport\\LearningSupport.csproj",
-      "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-      "outputPath": "D:\\Hoc_Tap\\DuAn_HMT\\HMT\\LearningSupport\\LearningSupport\\obj\\",
+      "projectPath": "C:\\Users\\MTBH\\Desktop\\laptrinhweb\\baocaoHMT\\HMT\\LearningSupport\\LearningSupport\\LearningSupport.csproj",
+      "packagesPath": "C:\\Users\\MTBH\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MTBH\\Desktop\\laptrinhweb\\baocaoHMT\\HMT\\LearningSupport\\LearningSupport\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MTBH\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8334,7 +8334,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

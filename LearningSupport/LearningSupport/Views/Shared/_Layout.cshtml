@@ -3,48 +3,181 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - LearningSupport</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/LearningSupport.styles.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - Learning Support</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" crossorigin="anonymous" />
+
+    <!-- Liên kết với CSS tùy chỉnh nếu có -->
+    @if (ViewData["CssFile"] != null)
+    {
+        <link rel="stylesheet" href="~/css/@ViewData["CssFile"]" />
+    }
+    <link rel="stylesheet" href="~/css/site.css" /> <!-- CSS chung -->
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">LearningSupport</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+       
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+             <div class="container">
+                 <img src="~/img/Logo.svg" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+                 <a class="navbar-brand" href="@Url.Action("Index", "Home")">Learning Support</a>
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                 </button>
+                 <div class="collapse navbar-collapse" id="navbarNav">
+                     <!-- Thanh tìm kiếm -->
+                     <form class="d-flex me-auto" role="search">
+                         <input class="form-control me-2" type="search" placeholder="Search for a question" aria-label="Search">
+                         <button class="btn btn-outline-success" type="submit">Search</button>
+                     </form>
+
+                     <ul class="navbar-nav ms-auto">
+                         <li class="nav-item">
+                             <a class="nav-link" href="@Url.Action("Index", "Flashcard")">Flashcards</a>
+                         </li>
+                         <li class="nav-item">
+                             <a class="nav-link" href="@Url.Action("Index", "Quiz")">Quizzes</a>
+                         </li>
+                         <li class="nav-item">
+                             <a class="nav-link" href="@Url.Action("About", "Home")">About</a>
+                         </li>
+
+                         <!-- Dropdown Công cụ học tập -->
+                         <li class="nav-item dropdown">
+                             <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                 Công cụ học tập
+                             </a>
+                             <ul class="dropdown-menu" aria-labelledby="toolsDropdown">
+                                 <li><a class="dropdown-item" href="#">Học sinh</a></li>
+                                 <li><a class="dropdown-item" href="#">Thẻ ghi nhớ</a></li>
+                                 <li><a class="dropdown-item" href="#">Học</a></li>
+                                 <li><a class="dropdown-item" href="#">Hướng dẫn học</a></li>
+                                 <li><a class="dropdown-item" href="#">Kiểm tra</a></li>
+                                 <li><a class="dropdown-item" href="#">Lời giải chuyên gia</a></li>
+                                 <li><hr class="dropdown-divider"></li>
+                                 <li><a class="dropdown-item" href="#">Giáo viên</a></li>
+                                 <li><a class="dropdown-item" href="#">Live</a></li>
+                                 <li><a class="dropdown-item" href="#">Blast</a></li>
+                                 <li><a class="dropdown-item" href="#">Danh mục</a></li>
+                                 <li><a class="dropdown-item" href="#">Cột mốc</a></li>
+                             </ul>
+                         </li>
+
+                         <!-- Dropdown Chủ đề -->
+                         <li class="nav-item dropdown">
+                             <a class="nav-link dropdown-toggle" href="#" id="subjectDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                 Chủ đề
+                             </a>
+                             <ul class="dropdown-menu" aria-labelledby="subjectDropdown">
+                                 <li class="dropdown-submenu">
+                                     <a class="dropdown-item dropdown-toggle" href="#">Bài thi</a>
+                                     <ul class="dropdown-menu">
+                                         <li><a class="dropdown-item" href="#">IELTS®</a></li>
+                                         <li><a class="dropdown-item" href="#">TOEFL®</a></li>
+                                         <li><a class="dropdown-item" href="#">TOEIC®</a></li>
+                                         <li><a class="dropdown-item" href="#">Khác</a></li>
+                                     </ul>
+                                 </li>
+                                 <li><a class="dropdown-item" href="#">Nghệ thuật và nhân văn</a></li>
+                                 <li><a class="dropdown-item" href="#">Ngôn ngữ</a></li>
+                                 <li><a class="dropdown-item" href="#">Toán học</a></li>
+                                 <li><a class="dropdown-item" href="#">Khoa học</a></li>
+                                 <li><a class="dropdown-item" href="#">Khoa học xã hội</a></li>
+                                 <li><a class="dropdown-item" href="#">Khác</a></li>
+                             </ul>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+         </nav>
+
+    </header>
+
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link active" href="#">
+                                <span data-feather="home"></span>
+                                Trang chủ
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link" href="#">
+                                <span data-feather="file"></span>
+                                Bài viết mới
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="shopping-cart"></span>
+                                Khóa học
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="users"></span>
+                                Cộng đồng
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="bar-chart-2"></span>
+                                Thống kê học tập
+                            </a>
                         </li>
                     </ul>
-                    <partial name="_LoginPartial" />
                 </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+            </nav>
+
+            <!-- Nội dung chính -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                @RenderBody()
+            </main>
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - LearningSupport - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <!-- Footer nâng cao -->
+    <footer class="bg-light text-center text-lg-start">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <h5 class="text-uppercase">Learning Support</h5>
+                    <p>
+                        Nền tảng giúp bạn học tập một cách hiệu quả hơn với các công cụ hỗ trợ tiên tiến.
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Tài nguyên</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#!" class="text-dark">Bài giảng</a></li>
+                        <li><a href="#!" class="text-dark">Thư viện</a></li>
+                        <li><a href="#!" class="text-dark">Câu hỏi</a></li>
+                        <li><a href="#!" class="text-dark">Cộng đồng</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Kết nối</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#!" class="text-dark">Facebook</a></li>
+                        <li><a href="#!" class="text-dark">Twitter</a></li>
+                        <li><a href="#!" class="text-dark">Instagram</a></li>
+                        <li><a href="#!" class="text-dark">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center p-3 bg-dark text-white">
+            &copy; 2024 Learning Support. All Rights Reserved.
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

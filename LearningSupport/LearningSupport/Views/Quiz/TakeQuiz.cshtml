@@ -1,0 +1,21 @@
+﻿@model LearningSupport.Models.Quiz
+
+<h2>@Model.Title</h2>
+
+<form asp-action="SubmitQuiz" method="post">
+    <input type="hidden" name="QuizId" value="@Model.Id" />
+    @foreach (var question in Model.Questions)
+    {
+        <div>
+            <h4>@question.Text</h4>
+            @foreach (var option in question.Options)
+            {
+                <div>
+                    <input type="radio" name="Answers[@question.Id]" value="@option.Id" /> @option.Text
+                </div>
+            }
+        </div>
+    }
+    <button type="submit">Submit</button>
+</form>
+

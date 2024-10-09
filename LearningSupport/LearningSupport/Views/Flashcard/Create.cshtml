@@ -1,0 +1,15 @@
+﻿@model Flashcard
+
+<h2>Tạo Flashcard Mới</h2>
+
+<form asp-action="Create" method="post">
+    <label>Câu hỏi:</label>
+    <input type="text" name="Question" required>
+    <br>
+    <label>Đáp án:</label>
+    <input type="text" name="Answer" required>
+    <br>
+    <button type="submit">Lưu</button>
+</form>
+
+

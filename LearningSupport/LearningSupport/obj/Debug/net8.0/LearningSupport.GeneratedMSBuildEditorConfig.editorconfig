@@ -17,47 +17,67 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LearningSupport
 build_property.RootNamespace = LearningSupport
-build_property.ProjectDir = D:\Hoc_Tap\DuAn_HMT\HMT\LearningSupport\LearningSupport\
+build_property.ProjectDir = C:\Users\MTBH\Desktop\laptrinhweb\baocaoHMT\HMT\LearningSupport\LearningSupport\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = D:\Hoc_Tap\DuAn_HMT\HMT\LearningSupport\LearningSupport
+build_property.MSBuildProjectDirectory = C:\Users\MTBH\Desktop\laptrinhweb\baocaoHMT\HMT\LearningSupport\LearningSupport
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Hoc_Tap/DuAn_HMT/HMT/LearningSupport/LearningSupport/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/MTBH/Desktop/laptrinhweb/baocaoHMT/HMT/LearningSupport/LearningSupport/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Hoc_Tap/DuAn_HMT/HMT/LearningSupport/LearningSupport/Views/Home/Index.cshtml]
+[C:/Users/MTBH/Desktop/laptrinhweb/baocaoHMT/HMT/LearningSupport/LearningSupport/Views/Flashcard/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhc2hjYXJkXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MTBH/Desktop/laptrinhweb/baocaoHMT/HMT/LearningSupport/LearningSupport/Views/Flashcard/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhc2hjYXJkXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MTBH/Desktop/laptrinhweb/baocaoHMT/HMT/LearningSupport/LearningSupport/Views/Flashcard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhc2hjYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MTBH/Desktop/laptrinhweb/baocaoHMT/HMT/LearningSupport/LearningSupport/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Hoc_Tap/DuAn_HMT/HMT/LearningSupport/LearningSupport/Views/Home/Privacy.cshtml]
+[C:/Users/MTBH/Desktop/laptrinhweb/baocaoHMT/HMT/LearningSupport/LearningSupport/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Hoc_Tap/DuAn_HMT/HMT/LearningSupport/LearningSupport/Views/Shared/Error.cshtml]
+[C:/Users/MTBH/Desktop/laptrinhweb/baocaoHMT/HMT/LearningSupport/LearningSupport/Views/Quiz/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVpelxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MTBH/Desktop/laptrinhweb/baocaoHMT/HMT/LearningSupport/LearningSupport/Views/Quiz/TakeQuiz.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVpelxUYWtlUXVpei5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MTBH/Desktop/laptrinhweb/baocaoHMT/HMT/LearningSupport/LearningSupport/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Hoc_Tap/DuAn_HMT/HMT/LearningSupport/LearningSupport/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/MTBH/Desktop/laptrinhweb/baocaoHMT/HMT/LearningSupport/LearningSupport/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Hoc_Tap/DuAn_HMT/HMT/LearningSupport/LearningSupport/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/MTBH/Desktop/laptrinhweb/baocaoHMT/HMT/LearningSupport/LearningSupport/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Hoc_Tap/DuAn_HMT/HMT/LearningSupport/LearningSupport/Views/_ViewImports.cshtml]
+[C:/Users/MTBH/Desktop/laptrinhweb/baocaoHMT/HMT/LearningSupport/LearningSupport/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Hoc_Tap/DuAn_HMT/HMT/LearningSupport/LearningSupport/Views/_ViewStart.cshtml]
+[C:/Users/MTBH/Desktop/laptrinhweb/baocaoHMT/HMT/LearningSupport/LearningSupport/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Hoc_Tap/DuAn_HMT/HMT/LearningSupport/LearningSupport/Views/Shared/_Layout.cshtml]
+[C:/Users/MTBH/Desktop/laptrinhweb/baocaoHMT/HMT/LearningSupport/LearningSupport/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-1vwgsb93pc

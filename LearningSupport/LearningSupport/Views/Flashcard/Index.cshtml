@@ -1,0 +1,26 @@
+﻿@model IEnumerable<LearningSupport.Models.Flashcard>
+
+@{
+    ViewData["Title"] = "Flashcard List";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Flashcard Collection</h1>
+
+    <div class="row">
+        @foreach (var flashcard in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">@flashcard.Term</h5>
+                        <p class="card-text">@flashcard.Definition</p>
+                        <a href="@Url.Action("ViewFlashcard", "Flashcard", new { id = flashcard.Id })" class="btn btn-primary btn-block">
+                            View Flashcard
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

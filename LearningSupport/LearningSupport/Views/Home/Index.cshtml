@@ -1,8 +1,164 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<LearningSupport.Models.Flashcard>
+
+@{
+    ViewData["Title"] = "Trang Chính - Hỗ Trợ Học Tập";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<header class="jumbotron text-center bg-primary text-white py-5">
+    <div class="container">
+        <h1 class="display-4">Chào Mừng Đến Với Ứng Dụng Hỗ Trợ Học Tập!</h1>
+        <p class="lead">Cung cấp các công cụ như Flashcard, Bài kiểm tra và Lịch ôn tập để giúp bạn cải thiện hiệu quả học tập.</p>
+        <a href="#features" class="btn btn-light btn-lg mt-3">Khám Phá Ngay</a>
+    </div>
+</header>
+
+
+    <div class="row mt-5">
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm hover-effect">
+                <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="Flashcards" />
+                <div class="card-body">
+                    <h5 class="card-title">Thẻ Ghi Nhớ</h5>
+                    <p class="card-text">Sử dụng thẻ ghi nhớ để giúp bạn ghi nhớ kiến thức một cách hiệu quả.</p>
+                    <a href="@Url.Action("Index", "Flashcard")" class="btn btn-primary">Bắt Đầu</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm hover-effect">
+                <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="Quizzes" />
+                <div class="card-body">
+                    <h5 class="card-title">Kiểm Tra Trắc Nghiệm</h5>
+                    <p class="card-text">Tham gia các bài kiểm tra trắc nghiệm để đánh giá kiến thức của bạn.</p>
+                    <a href="@Url.Action("Index", "Quiz")" class="btn btn-primary">Tham Gia Ngay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <h2>Các Chủ Đề Học Tập</h2>
+        <div class="btn-group mt-3" role="group" aria-label="Basic example">
+            <a href="#" class="btn btn-secondary">Ngôn Ngữ</a>
+            <a href="#" class="btn btn-secondary">Toán Học</a>
+            <a href="#" class="btn btn-secondary">Khoa Học</a>
+            <a href="#" class="btn btn-secondary">Nghệ Thuật</a>
+        </div>
+    </div>
+
+    <!-- Khu vực Đánh giá -->
+    <div class="mt-5">
+        <h2 class="text-center">Đánh Giá của Người Dùng</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="card-text">"Flashcards rất hữu ích! Tôi đã ghi nhớ nhanh hơn."</p>
+                        <h5 class="card-title">- Nguyễn Văn A</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="card-text">"Bài kiểm tra trắc nghiệm giúp tôi tự đánh giá kiến thức."</p>
+                        <h5 class="card-title">- Trần Thị B</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="card-text">"Tôi thích thiết kế của ứng dụng này!"</p>
+                        <h5 class="card-title">- Lê Văn C</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<style>
+    header.jumbotron {
+        background-image: url('https://img.freepik.com/free-vector/flat-background-international-day-education_23-2151032867.jpg?w=1060&t=st=1728217778~exp=1728218378~hmac=80296ccb1ebcb2564c08326ba3cb7057890463dfc167abad241c830b40812f52'); /* Hình nền tùy chỉnh */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Tạo bóng cho chữ */
+        padding: 100px 0; /* Điều chỉnh khoảng cách */
+    }
+
+        header.jumbotron::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Hiệu ứng làm tối nền */
+            z-index: 1;
+        }
+
+        header.jumbotron .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        header.jumbotron h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        header.jumbotron p.lead {
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+
+        header.jumbotron a.btn-light {
+            font-size: 1.1rem;
+            padding: 10px 30px;
+            border-radius: 30px; /* Làm tròn nút */
+            transition: background-color 0.3s ease;
+        }
+
+            header.jumbotron a.btn-light:hover {
+                background-color: #f8f9fa;
+                color: #007bff;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng đổ khi hover */
+            }
+
+    body {
+        background: <img src="~/img/10059587.jpg" alt=""> no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Arial', sans-serif; /* Chọn font chữ */
+    }
+
+    h1, h2 {
+        color: #ffffff; /* Màu chữ cho tiêu đề */
+    }
+
+    .hover-effect {
+        transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển động */
+    }
+
+    .hover-effect:hover {
+        transform: scale(1.05); /* Phóng to khi hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bóng đổ khi hover */
+    }
+
+    .btn-secondary {
+        background-color: #6c757d; /* Màu nền nút */
+        border: none;
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6268; /* Màu nền khi hover */
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.8); /* Nền thẻ sáng hơn để nổi bật */
+    }
+</style>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<LearningSupport.Models.Quiz>
+
+@{
+    ViewData["Title"] = "Quiz List";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Available Quizzes</h1>
+
+    <div class="row">
+        @foreach (var quiz in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">@quiz.Title</h5>
+                        <p class="card-text">This quiz contains @quiz.Questions.Count questions.</p>
+                        <a href="@Url.Action("TakeQuiz", "Quiz", new { id = quiz.Id })" class="btn btn-primary btn-block">
+                            Start Quiz
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

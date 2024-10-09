@@ -30,6 +30,7 @@ else
 	app.UseHsts();
 }
 
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

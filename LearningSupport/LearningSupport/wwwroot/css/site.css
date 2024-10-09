@@ -1,22 +1,121 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+﻿/* Cài đặt chung */
 body {
-  margin-bottom: 60px;
+    font-family: 'Roboto', sans-serif; /* Thay đổi font chữ sang Roboto cho sự chuyên nghiệp và hiện đại */
+    background-color: #f5f7fa; /* Màu nền xám sáng hơn */
+    margin: 0;
+    padding-top: 80px;
+    color: #333; /* Màu chữ mặc định */
+    transition: background-color 0.3s ease-in-out; /* Hiệu ứng khi thay đổi nền */
+}
+
+/* Header với bóng đổ và hiệu ứng */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    position: fixed; /* Giữ header cố định */
+    top: 0; /* Cố định ở trên cùng */
+    left: 0;
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    z-index: 1000; /* Đảm bảo nó nằm trên các phần tử khác */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+    /* Header khi cuộn trang */
+    header.scrolled {
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Bóng đổ đậm hơn khi cuộn */
+        padding: 15px 0;
+    }
+
+/* Sidebar cố định với hiệu ứng */
+.sidebar {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background-color: #2d3436; /* Màu nền đen tối hơn */
+    padding: 20px;
+    transition: all 0.3s ease; /* Hiệu ứng mượt khi đóng/mở sidebar */
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15); /* Bóng đổ nổi bật hơn */
+    border-radius: 10px; /* Bo góc mềm mại cho sidebar */
+    transform: translateX(0); /* Sidebar bắt đầu ở vị trí bình thường */
+}
+    
+
+    /* Liên kết trong sidebar */
+    .sidebar .nav-link {
+        color: #b2bec3; /* Màu xám nhạt */
+        margin: 10px 0;
+        padding: 12px 15px;
+        display: block;
+        border-radius: 8px; /* Bo góc nhiều hơn */
+        transition: all 0.3s ease-in-out;
+        font-weight: 500; /* Tăng độ đậm cho font */
+    }
+
+        .sidebar .nav-link:hover {
+            background-color: #636e72; /* Màu nền đậm hơn khi hover */
+            color: #ffffff;
+            transform: translateX(5px); /* Hiệu ứng đẩy nhẹ khi hover */
+        }
+
+        .sidebar .nav-link.active {
+            background-color: #0984e3; /* Màu nền xanh sáng hơn khi active */
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(9, 132, 227, 0.6); /* Bóng xanh xung quanh liên kết */
+            transform: translateX(0); /* Giữ liên kết ở vị trí cố định */
+        }
+
+/* Nội dung chính */
+.main {
+    padding: 30px; /* Padding rộng hơn */
+    background-color: #ffffff; /* Nền trắng mịn cho nội dung chính */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Bóng nhẹ hơn */
+    border-radius: 12px; /* Bo góc lớn hơn */
+    margin: 25px;
+    transition: transform 0.3s ease; /* Hiệu ứng di chuyển nhẹ */
+}
+
+    .main:hover {
+        transform: translateY(-5px); /* Nội dung nổi lên khi hover */
+    }
+
+/* Footer nâng cấp */
+footer {
+    background-color: #f1f3f5; /* Nền xám sáng cho footer */
+    padding: 50px 0; /* Padding rộng hơn cho footer */
+    text-align: center;
+    border-top: 2px solid #dee2e6; /* Đường kẻ đậm hơn cho footer */
+}
+
+    /* Tiêu đề trong footer */
+    footer h5 {
+        color: #2d3436;
+        margin-bottom: 20px;
+        font-size: 1.3rem; /* Kích thước lớn hơn cho tiêu đề */
+        font-weight: 600; /* Chữ đậm hơn */
+    }
+
+    /* Liên kết trong footer */
+    footer a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500; /* Tăng độ đậm của liên kết */
+        transition: color 0.3s ease-in-out;
+    }
+
+        footer a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+/* Responsive cho sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Ẩn sidebar trên thiết bị nhỏ */
+    }
+
+    .main {
+        margin: 10px; /* Giảm margin trên thiết bị nhỏ */
+    }
 }
